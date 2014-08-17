@@ -2,6 +2,9 @@
 alias pi="pod install"
 alias pu="pod update"
 
+# Unix
+alias l="ls -la"
+
 # Xcode
 alias ox="open -a 'Xcode' ."
 alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/"
