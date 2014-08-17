@@ -1,0 +1,50 @@
+[user]
+  name = Mark Adams
+  email = mark@thoughtbot.com
+
+[fetch]
+  prune = true
+
+[color]
+  ui = true
+
+[pretty]
+  custom = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+  autocrlf = input
+
+[merge]
+  ff = only
+
+[apply]
+  whitespace = warn
+
+[mergetool]
+  keepBackup = false
+  prompt = false
+
+[help]
+  autocorrect = 1
+
+[status]
+  submodule = 1
+
+[push]
+  default = current
+
+[pull]
+  rebase = true
+
+[credential]
+  helper = osxkeychain
+
+[alias]
+  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f

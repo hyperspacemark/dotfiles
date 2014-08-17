@@ -1,0 +1,7 @@
+# Cocoapods
+alias pi="pod install"
+alias pu="pod update"
+
+# Xcode
+alias ox="open -a 'Xcode' ."
+alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/"
