@@ -5,7 +5,7 @@ g() {
     git $@
   else
     git status
-  fi
+      fi
 }
 
 # Complete g like git
