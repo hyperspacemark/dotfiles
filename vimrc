@@ -11,3 +11,5 @@ set shiftwidth=2
 set expandtab
 
 set title
+
+autocmd BufNewFile,BufRead Podfile setfiletype ruby
