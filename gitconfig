@@ -18,7 +18,7 @@
 
 [merge]
   ff = only
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 
 [apply]
   whitespace = warn
@@ -51,14 +51,14 @@
   smudge = git-media-smudge %f
 
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
 
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
