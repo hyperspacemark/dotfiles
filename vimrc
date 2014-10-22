@@ -9,7 +9,8 @@ set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
+set number
 set title
+set laststatus=2
 
 autocmd BufNewFile,BufRead Podfile setfiletype ruby
