@@ -1,0 +1,47 @@
+"
+" A configuration file for https://github.com/JugglerShu/XVim
+"
+"
+
+" Comments
+nnoremap gcc :xccmd commentAndUncommentCurrentLines<CR>
+vnoremap gc  :xccmd commentAndUncommentCurrentLines<CR>
+
+" Emulate CTRL-P
+noremap <C-p> :xccmd openQuickly<CR>
+
+" Case-insensitive searching.
+set ignorecase
+" But case-sensitive if expression contains a capital letter.
+set smartcase
+
+" Setup the number line
+set number
+set relativenumber
+
+" Use the system pasteboard
+set clipboard=unnamed
+
+" noremap <space>b to toggle a breakpoint at the current line
+nnoremap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
+
+" Better navigation
+nnoremap H ^
+nnoremap L $
+
+" Window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Make computers make sense
+nnoremap Y y$
+
+" I'd like the following command to save too
+" it doesn't seem like xvim supports this: \| update<CR>
+vnoremap s :sort ui<CR>
+
+" vim-unimpared knock off
+nnoremap ]e "udd"up
+nnoremap [e "uddk"uP

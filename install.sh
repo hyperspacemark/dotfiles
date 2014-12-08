@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files=(aliases gemrc gitconfig gitignore hushlogin lldbinit vim vimrc zshrc)
+files=(aliases gemrc gitconfig gitignore hushlogin lldbinit vim vimrc xvimrc zshrc)
 
 for file in ${files[@]}; do
   new_path="$HOME/.$file"
