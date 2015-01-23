@@ -1,3 +1,5 @@
+setopt RM_STAR_SILENT
+
 # Aliases
 source ~/.aliases
 
