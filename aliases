@@ -7,4 +7,4 @@ alias l="ls -la"
 
 # Xcode
 alias ox="open -a 'Xcode' ."
-alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/"
+alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
