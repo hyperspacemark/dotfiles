@@ -12,5 +12,8 @@ set expandtab
 set number
 set title
 set laststatus=2
+set textwidth=80
+set colorcolumn=1
 
 autocmd BufNewFile,BufRead Podfile setfiletype ruby
+autocmd BufRead gitcommit setlocal formatoptions-=c
