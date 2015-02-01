@@ -8,3 +8,6 @@ alias l="ls -la"
 # Xcode
 alias ox="open -a 'Xcode' ."
 alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
+
+# Git
+alias reloadignore="git rm -r --cached `git ls-files -i --exclude-standard`"
