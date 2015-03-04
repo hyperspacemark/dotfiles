@@ -25,6 +25,9 @@ set clipboard=unnamed
 " noremap <space>b to toggle a breakpoint at the current line
 nnoremap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
 
+" rename refactor
+nnoremap ,r :xccmd refactorRename<CR>
+
 " Better navigation
 nnoremap H ^
 nnoremap L $
