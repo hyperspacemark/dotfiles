@@ -51,6 +51,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 
+# Kaleidoscope
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
@@ -63,3 +64,9 @@
 
 [diff]
   tool = Kaleidoscope
+
+# Github for Mac
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
