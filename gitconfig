@@ -1,6 +1,6 @@
 [user]
   name = Mark Adams
-  email = mark@thoughtbot.com
+	email = mark.adams86@gmail.com
 
 [fetch]
   prune = true
@@ -40,7 +40,7 @@
   rebase = true
 
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 
 [alias]
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
@@ -69,4 +69,8 @@
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
 	required = true
