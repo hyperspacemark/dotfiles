@@ -16,5 +16,4 @@ for function in ~/.dotfiles/zsh/functions/*; do
   source $function
 done
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
