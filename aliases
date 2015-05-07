@@ -11,3 +11,4 @@ alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 
 # Git
 alias reloadignore="git rm -r --cached . && git add ."
+alias gb="git branch -r | grep origin/ma/"
