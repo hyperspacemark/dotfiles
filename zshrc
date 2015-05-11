@@ -1,5 +1,7 @@
 setopt RM_STAR_SILENT
 
+export PATH="/usr/local/bin:$PATH"
+
 # Aliases
 source ~/.aliases
 
