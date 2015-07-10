@@ -1,3 +1,4 @@
+# OS X
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -19,3 +20,35 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata
+*.xccheckout
+*.xcworkspace
+
+# Build products
+build/
+*.o
+*.LinkFileList
+*.hmap
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+# Cocoapods
+Pods
+Carthage
+
+# # AppCode specific files
+.idea/
+*.iml
