@@ -7,8 +7,17 @@ alias l="ls -la"
 
 # Xcode
 alias ox="open -a 'Xcode' ."
+alias oxb="open -a 'Xcode-beta' ."
+alias sx="sudo xcode-select -s /Applications/Xcode.app"
+alias sxb="sudo xcode-select -s /Applications/Xcode-beta.app"
 alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 
 # Git
 alias reloadignore="git rm -r --cached . && git add ."
 alias gb="git branch -r | grep origin/ma/"
+
+# Projects
+alias v="cd ~/Development/Venmo/venmo-ios && g fetch && ox"
+alias vn="cd ~/Development/Venmo/ios && g fetch && oxb"
+alias vp="cd ~/Development/Venmo/Platform && g fetch && ox"
+alias voss="cd ~/Development/Venmo/OSS"
