@@ -1,8 +1,7 @@
 set nocompatible
 syntax enable
 filetype plugin indent on
-set background=dark
-colorscheme solarized
+colorscheme Spacedust
 
 set backspace=indent,eol,start
 
@@ -13,7 +12,6 @@ set number
 set title
 set laststatus=2
 set textwidth=80
-set colorcolumn=+1
 set relativenumber
 set mouse=a
 set ttyfast
