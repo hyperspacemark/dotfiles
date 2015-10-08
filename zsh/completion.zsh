@@ -1,8 +1,18 @@
-# Matches case insensitive for lowercase
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+autoload -U compinit
+compinit
 
-# Pasting with tabs doesn't perform completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' insert-tab pending
 
-fpath=(~/.dotfiles/zsh/completions $fpath)
-autoload -Uz ~/.dotfiles/zsh/completions/*(:t)
+g() {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git status
+  fi
+}
+compdef g=git
+
+_git_delete_branch() {
+  __gitcomp "$(__git_heads)"
+}

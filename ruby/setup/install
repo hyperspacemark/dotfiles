@@ -1,0 +1,3 @@
+latest_ruby_version=$(rbenv install --l | ag -v - | tail -1)
+rbenv install $latest_ruby_version
+rbenv global $latest_ruby_version

@@ -10,9 +10,13 @@ Icon
 # Thumbnails
 ._*
 
-# Files that might appear on external disk
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
+.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -21,34 +25,35 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Xcode per-user config
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-xcuserdata
-*.xccheckout
-*.xcworkspace
+# Xcode
 
 # Build products
 build/
-*.o
-*.LinkFileList
-*.hmap
+DerivedData
 
-# Automatic backup files
-*~.nib/
-*.swp
-*~
-*.dat
-*.dep
+# User settings
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.pbxuser
+!default.pbxuser
+xcuserdata
+
+# Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+# Obj-C/Swift
+*.hmap
+*.ipa
 
 # Cocoapods
-Pods
-Carthage
+Pods/
 
-# # AppCode specific files
-.idea/
-*.iml
+# Carthage
+Carthage/

@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "\n==========================================="
+echo "Setting up Homebrew\n"
+
+echo "Installing Homebrew"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+  || echo "Homebrew already installed"
+
+export PATH=/usr/loca/bin:$PATH
+
+echo "Installing brew bundle"
+brew tap Homebrew/bundle
+
+echo "Installing homebrew dependencies"
+
+find . -type f -iname "Brewfile" -print0 | while IFS= read -r -d $'\0' line; do
+  echo "\n------------------"
+  echo "Installing dependencies from $line"
+  brew bundle --file="$line" \
+    || echo "Some dependencies failed, attempting to continue"
+done
