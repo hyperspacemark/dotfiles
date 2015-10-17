@@ -71,12 +71,6 @@ _default_color() {
   fi
 }
 
-_user_name() {
-  if [ $USER != "joshuaclayton" ]; then
-    echo "$USER "
-  fi
-}
-
 _separate()               { if [ -n "$1" ]; then echo " $1"; fi }
 _grey()                   { echo "$(_default_color "$1")" }
 _yellow()                 { echo "$(_color "$1" yellow)" }
