@@ -1,1 +1,1 @@
-alias l='ls -al'
+alias l="ls -al"
