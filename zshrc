@@ -1,6 +1,6 @@
 source $HOME/.aliasrc
 
-for zsh_source in $HOME/.zsh/*.zsh; do
+for zsh_source in $DOTFILES/**/*.zsh; do
   source $zsh_source
 done
 
