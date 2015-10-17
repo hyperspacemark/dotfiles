@@ -46,10 +46,8 @@ set smartcase
 
 set incsearch
 set hlsearch
-set showmatch
 
 set relativenumber
-set cursorline
 
 set wrap
 set scrolloff=3
