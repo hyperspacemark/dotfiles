@@ -16,3 +16,8 @@ compdef g=git
 _git_delete_branch() {
   __gitcomp "$(__git_heads)"
 }
+
+m() {
+  man -t "$@" | open -f -a Preview
+}
+compdef m=man
