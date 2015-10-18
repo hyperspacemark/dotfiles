@@ -84,16 +84,4 @@ _colored_path()           { echo "$(_grey "%c")" }
 _colored_git_branch()     { echo "$(_git_prompt_color "$(_git_prompt_info)")" }
 _colored_git_difference() { echo "$(_yellow "$(_git_difference_from_track)")" }
 
-function zle-line-init zle-keymap-select {
-  VIMODE=$KEYMAP
-  zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-function precmd {
-  $(git status 2> /dev/null >! "/tmp/git-status-$$")
-}
-
 PROMPT='$(_bracket_wrap "$(_basic)$(_separate $(_colored_git_branch))$(_separate $(_colored_git_difference))")'
