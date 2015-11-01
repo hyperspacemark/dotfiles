@@ -9,7 +9,7 @@ echo "Installing Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
   || echo "Homebrew already installed"
 
-export PATH=/usr/loca/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 echo "Installing brew bundle"
 brew tap Homebrew/bundle
