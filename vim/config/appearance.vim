@@ -1,13 +1,19 @@
-Plugin 'itchyny/lightline.vim'
+" Color scheme
+colorscheme spacedust
 
-set laststatus=2
-
+" Status bar
 let g:lightline = { 'colorscheme': 'wombat' }
 
 let g:lightline.active = {
   \ 'right': [
-  \   ['filetype']
+  \   ['filetype'],
   \ ]
 \}
 
 let g:lightline.inactive = { 'right': [ ] }
+
+set laststatus=2
+
+" Line numbers
+set relativenumber
+set number
