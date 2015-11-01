@@ -12,4 +12,3 @@ call s:SourceConfigFilesIn('plugins')
 call plug#end()
 
 call s:SourceConfigFilesIn('config')
-
