@@ -9,6 +9,9 @@ echo "Installing Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
   || echo "Homebrew already installed"
 
+echo "Changing /usr/local owner to admin"
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+
 export PATH=/usr/local/bin:$PATH
 
 echo "Installing brew bundle"
