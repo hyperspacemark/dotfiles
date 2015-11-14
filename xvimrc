@@ -1,7 +1,13 @@
-"
-" A configuration file for https://github.com/JugglerShu/XVim
-"
-"
+" No status bar
+set laststatus=0
+
+" Search
+set incsearch
+set ignorecase
+set smartcase
+set wrap
+set wrapscan
+set gdefault
 
 " Comments
 nnoremap gcc :xccmd commentAndUncommentCurrentLines<CR>
@@ -9,11 +15,6 @@ vnoremap gc  :xccmd commentAndUncommentCurrentLines<CR>
 
 " Emulate CTRL-P
 noremap <C-p> :xccmd openQuickly<CR>
-
-" Case-insensitive searching.
-set ignorecase
-" But case-sensitive if expression contains a capital letter.
-set smartcase
 
 " Setup the number line
 set number
@@ -37,6 +38,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Make computers make sense
+nnoremap D d$
 nnoremap Y y$
 
 " I'd like the following command to save too
