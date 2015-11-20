@@ -1,2 +1,2 @@
-brew 'rbenv'
-brew 'ruby-build'
+brew 'chruby'
+brew 'ruby-install', args: ['--HEAD']
