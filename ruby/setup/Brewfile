@@ -1,2 +1,2 @@
 brew 'chruby'
-brew 'ruby-install', args: ['--HEAD']
+brew 'ruby-install', args: ['HEAD']
