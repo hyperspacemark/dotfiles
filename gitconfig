@@ -30,6 +30,7 @@
 
 [rebase]
   autosquash = true
+  autostash = true
 
 [merge]
   ff = only
