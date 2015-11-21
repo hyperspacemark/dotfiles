@@ -9,13 +9,6 @@ set wrap
 set wrapscan
 set gdefault
 
-" Comments
-nnoremap gcc :xccmd commentAndUncommentCurrentLines<CR>
-vnoremap gc  :xccmd commentAndUncommentCurrentLines<CR>
-
-" Emulate CTRL-P
-noremap <C-p> :xccmd openQuickly<CR>
-
 " Setup the number line
 set number
 set relativenumber
@@ -23,32 +16,46 @@ set relativenumber
 " Use the system pasteboard
 set clipboard=unnamed
 
-" noremap <space>b to toggle a breakpoint at the current line
-nnoremap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
+" Comments
+nmap gcc :xccmd commentAndUncommentCurrentLines<CR>
+vmap gc  :xccmd commentAndUncommentCurrentLines<CR>
 
-" rename refactor
-nnoremap ,r :xccmd refactorRename<CR>
+" Open quickly
+nmap <space>f :xcmenucmd Open Quickly...<CR>
+
+" Issues
+nmap <space>n :nissue<CR>
+nmap <space>p :pissue<CR>
+
+" Toggle breakpoint at current line
+nmap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
+
+" Rename refactor
+nmap ,r :xccmd refactorRename<CR>
 
 " Better navigation
-nnoremap H ^
-nnoremap L $
+nmap H ^
+nmap L $
 
 " Window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
 
 " Make computers make sense
-nnoremap D d$
-nnoremap Y y$
+nmap D d$
+nmap Y y$
 
 " I'd like the following command to save too
 " it doesn't seem like xvim supports this: \| update<CR>
-vnoremap s :sort ui<CR>
+vmap s :sort ui<CR>
 
 " vim-unimpared knock off
-nnoremap ]e "udd"up
-nnoremap [e "uddk"uP
+nmap ]e "udd"up
+nmap [e "uddk"uP
 
 " Jump to counterpart
-nnoremap <C-j> :xccmd jumpToPreviousCounterpart<CR>
-nnoremap <C-k> :xccmd jumpToNextCounterpart<CR>
+nmap <C-j> :xccmd jumpToPreviousCounterpart<CR>
+nmap <C-k> :xccmd jumpToNextCounterpart<CR>
+
+" Show documentation
+nmap <space>d :xcmenucmd Quick Help for Selected Item<CR>
