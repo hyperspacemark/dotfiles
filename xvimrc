@@ -20,12 +20,11 @@ set clipboard=unnamed
 nmap gcc :xccmd commentAndUncommentCurrentLines<CR>
 vmap gc  :xccmd commentAndUncommentCurrentLines<CR>
 
-" Open quickly
-nmap <space>f :xcmenucmd Open Quickly...<CR>
 
 " Issues
 nmap <space>n :nissue<CR>
 nmap <space>p :pissue<CR>
+nmap <space>f :xcmenucmd Fix All in Scope<CR>
 
 " Toggle breakpoint at current line
 nmap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
@@ -59,3 +58,4 @@ nmap <C-k> :xccmd jumpToNextCounterpart<CR>
 
 " Show documentation
 nmap <space>d :xcmenucmd Quick Help for Selected Item<CR>
+
