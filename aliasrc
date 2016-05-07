@@ -3,10 +3,7 @@ alias pi="pod install"
 alias pu="pod update"
 
 # Projects
-alias v="cd ~/Development/Venmo/venmo-ios && g fetch && ox"
-alias vn="cd ~/Development/Venmo/ios && g fetch && oxb"
-alias vp="cd ~/Development/Venmo/Platform && g fetch && ox"
-alias voss="cd ~/Development/Venmo/OSS"
+alias v="cd ~/Development/Venmo/iOS && g fetch && ox"
 
 # Git
 alias sha="git log -1 --format='%h' | tr -d '\n' | pbcopy"
