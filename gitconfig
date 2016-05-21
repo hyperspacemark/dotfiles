@@ -83,12 +83,12 @@
   required = true
 
 [filter "lfs"]
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
 
 # Hub
 
 [hub]
   host = github.braintreeps.com
-  protocol = ssh
+  protocol = https
