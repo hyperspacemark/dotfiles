@@ -10,5 +10,15 @@ set wrap                " Enable line wrapping
 
 set formatoptions=t     " Prevent auto-commenting hard line wraps
 
+set ttyfast             " Send more characters for redraws
+set mouse=a             " Enable the mouse in all modes *gasp*
+
+if has('mouse_sgr')
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+endif
+
 nnoremap H ^
 nnoremap L $
+nmap <Space>t :TagbarToggle<CR>

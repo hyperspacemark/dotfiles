@@ -18,3 +18,9 @@ Plug 'cfdrake/vim-carthage'
 
 " Use system pasteboard
 Plug 'sickill/vim-pasta'
+
+" Syntastic
+Plug 'scrooloose/syntastic'
+
+" Fancy ctag display
+Plug 'majutsushi/tagbar'

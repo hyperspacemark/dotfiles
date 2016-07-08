@@ -13,6 +13,9 @@ let g:lightline.active = {
 let g:lightline.inactive = { 'right': [ ] }
 
 set laststatus=2
+set statusline+=%#warningmsg#
+set statusline+=${SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " Line numbers
 set relativenumber
