@@ -16,22 +16,6 @@ set relativenumber
 " Use the system pasteboard
 set clipboard=unnamed
 
-" Comments
-nmap gcc :xccmd commentAndUncommentCurrentLines<CR>
-vmap gc  :xccmd commentAndUncommentCurrentLines<CR>
-
-
-" Issues
-nmap <space>n :nissue<CR>
-nmap <space>p :pissue<CR>
-nmap <space>f :xcmenucmd Fix All in Scope<CR>
-
-" Toggle breakpoint at current line
-nmap ,b :xccmd toggleBreakpointAtCurrentLine<CR>
-
-" Rename refactor
-nmap ,r :xccmd refactorRename<CR>
-
 " Better navigation
 nmap H ^
 nmap L $
@@ -52,10 +36,30 @@ vmap s :sort ui<CR>
 nmap ]e "udd"up
 nmap [e "uddk"uP
 
-" Jump to counterpart
-nmap <C-j> :xccmd jumpToPreviousCounterpart<CR>
-nmap <C-k> :xccmd jumpToNextCounterpart<CR>
+" Move visual blocks
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
-" Show documentation
+" Navigate
+nmap <space>ch :xcmenucmd Find Call Hierarchy<CR>
+nmap <space>jp :xcmenucmd Jump to Definition<CR>
+nmap <space>ja :xccmd jumpToDefinitionWithAlternate<CR>
+nmap <space>i :xcmenucmd Jump to Generated Interface<CR>
+
+" Editor
+nmap gcc :xccmd commentAndUncommentCurrentLines<CR>
+vmap gc  :xccmd commentAndUncommentCurrentLines<CR>
+nmap <space>f :xcmenucmd Fix All in Scope<CR>
+nmap <space>gb :xcmenucmd Show Blame for Line<CR>
+
+" Product
+nmap <space>C :xccmd compileCurrentFile<CR>
+nmap <space>k :xcmenucmd Clean<CR>
+nmap <space>K :xcmenucmd Clean Build Folder...<CR>
+
+" Debug
+nmap bb :xcmenucmd Add Breakpoint at Current Line<CR>
+nmap <space>vi :xcmenucmd Capture View Hierarchy<CR>
+
+" Documentation
 nmap <space>d :xcmenucmd Quick Help for Selected Item<CR>
-
