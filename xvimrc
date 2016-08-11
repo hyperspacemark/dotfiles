@@ -47,8 +47,8 @@ nmap <space>ja :xccmd jumpToDefinitionWithAlternate<CR>
 nmap <space>i :xcmenucmd Jump to Generated Interface<CR>
 
 " Editor
-nmap gcc :xccmd commentAndUncommentCurrentLines<CR>
-vmap gc  :xccmd commentAndUncommentCurrentLines<CR>
+nmap gcc :xcmenucmd Comment Selection<CR>
+vmap gc  :xcmenucmd Comment Selection<CR>
 nmap <space>f :xcmenucmd Fix All in Scope<CR>
 nmap <space>gb :xcmenucmd Show Blame for Line<CR>
 
