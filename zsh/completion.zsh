@@ -8,7 +8,7 @@ g() {
   if [[ $# > 0 ]]; then
     git $@
   else
-    git status --short --branch
+    git status --short --branch --ignore-submodules
   fi
 }
 compdef g=git

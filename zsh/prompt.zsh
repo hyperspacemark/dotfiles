@@ -85,7 +85,7 @@ _colored_git_branch()     { echo "$(_git_prompt_color "$(_git_prompt_info)")" }
 _colored_git_difference() { echo "$(_yellow "$(_git_difference_from_track)")" }
 
 function precmd {
-  $(git status 2> /dev/null >! "/tmp/git-status-$$")
+  $(git status --ignore-submodules 2> /dev/null >! "/tmp/git-status-$$")
 }
 
 PROMPT='$(_bracket_wrap "$(_basic)$(_separate $(_colored_git_branch))$(_separate $(_colored_git_difference))")'
