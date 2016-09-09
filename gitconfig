@@ -35,7 +35,15 @@
 
 [diff]
   tool = Kaleidoscope
-  compactionheuristic = true
+  compactionHeuristic = true
+  renames = copies
+  algorithm = histogram
+
+[diff "plist"]
+  textconv = plutil -convert xml1 -o -
+
+[diff "mobileprovision"]
+  textconv = openssl smime -inform der -verify -in
 
 [difftool]
   prompt = false
