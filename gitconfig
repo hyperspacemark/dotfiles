@@ -29,6 +29,9 @@
 [push]
   default = current
 
+[tag]
+  sort = v:refname
+
 [rebase]
   autosquash = true
   autostash = true
