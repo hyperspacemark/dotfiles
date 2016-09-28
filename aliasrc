@@ -8,6 +8,9 @@ alias v="cd ~/Development/Venmo/iOS && g fetch && ox"
 # Git
 alias sha="git log -1 --format='%h' | tr -d '\n' | pbcopy"
 
+# lol
+alias fucking="killall"
+
 # macOS
 alias mkdd="diskutil erasevolume HFS+ 'DerivedData' `hdiutil attach -nomount ram://33554432`"
 alias rmdd="rm -rf /Volumes/DerivedData/*"
