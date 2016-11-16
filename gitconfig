@@ -103,3 +103,7 @@
 [hub]
   host = github.braintreeps.com
   protocol = https
+[filter "fix-eol-eof"]
+	clean = fixup-eol-eof
+	smudge = cat
+	required = true
