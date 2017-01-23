@@ -39,7 +39,7 @@
 
 [diff]
   tool = Kaleidoscope
-  compactionHeuristic = true
+  indentHeuristic = true
   renames = copies
   algorithm = histogram
 
