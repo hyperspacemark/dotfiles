@@ -79,6 +79,7 @@
 [alias]
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  delete-tag = !sh -c 'git tag -d $1 && git push origin :refs/tags/$1' -
   checkout-pr = !sh -c 'git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1' -
 
 [filter "media"]
