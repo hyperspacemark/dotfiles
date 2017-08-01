@@ -1,3 +1,3 @@
-path=($HOME/.rbenv/shims $HOME/.dotfiles/bin /usr/local/sbin /usr/local/bin $path)
+path=($HOME/.rbenv/shims $HOME/.fastlane/bin $HOME/.dotfiles/bin /usr/local/sbin /usr/local/bin $path)
 if which hub > /dev/null; then eval "$(hub alias -s)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
