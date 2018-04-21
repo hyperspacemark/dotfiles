@@ -49,7 +49,7 @@ nmap <space>i :xcmenucmd Jump to Generated Interface<CR>
 " Editor
 nmap gcc :xcmenucmd Comment Selection<CR>
 vmap gc  :xcmenucmd Comment Selection<CR>
-nmap <space>f :xcmenucmd Fix All in Scope<CR>
+nmap <space>f :xcmenucmd Fix All Issues<CR>
 nmap <space>gb :xcmenucmd Show Blame for Line<CR>
 
 " Product
@@ -62,4 +62,4 @@ nmap bb :xcmenucmd Add Breakpoint at Current Line<CR>
 nmap <space>vi :xcmenucmd Capture View Hierarchy<CR>
 
 " Documentation
-nmap <space>d :xcmenucmd Quick Help for Selected Item<CR>
+nmap <space>d :xcmenucmd Show Quick Help for Selected Item<CR>
