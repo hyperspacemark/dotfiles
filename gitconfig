@@ -1,6 +1,6 @@
 [user]
-  name = Mark Adams
-  email = mark.adams86@gmail.com
+	name = Mark Adams
+	email = mark.adams86@gmail.com
 
 [github]
   user = hyperspacemark
@@ -95,10 +95,10 @@
   required = true
 
 [filter "lfs"]
+	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-	clean = git-lfs clean -- %f
 
 # Hub
 
@@ -109,3 +109,5 @@
 	clean = fixup-eol-eof
 	smudge = cat
 	required = true
+[http]
+	cookiefile = /Users/markadams/.gitcookies
