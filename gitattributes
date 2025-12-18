@@ -1,4 +1,0 @@
-*.mobileprovision diff=mobileprovision
-*.plist diff=plist
-*.swift filter=fix-eol-eof
-*.pbxproj merge=union
