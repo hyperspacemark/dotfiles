@@ -1,1 +1,0 @@
-git branch -d `git branch --merged | grep -v '^*' | tr -d '\n'`

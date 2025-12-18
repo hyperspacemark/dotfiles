@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-set -e
-
-echo "\n==========================================="
-echo "Removing OS X's bullshit path helper\n"
-
-sudo rm /etc/zprofile \
-  || echo "Path helper already deleted"
