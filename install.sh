@@ -21,6 +21,7 @@ link() {
 
 link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 link "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
+link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/zsh/.zprofile" "$HOME/.zprofile"
 link "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 
