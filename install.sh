@@ -25,6 +25,7 @@ link "$DOTFILES_DIR/zsh/.zprofile" "$HOME/.zprofile"
 link "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 
 mkdir -p "$HOME/.zshrc.d"
+mkdir -p "$HOME/.zsh/cache"
 for f in "$DOTFILES_DIR"/zsh/.zshrc.d/*.zsh; do
   link "$f" "$HOME/.zshrc.d/$(basename "$f")"
 done
