@@ -56,7 +56,7 @@ gprune() {
       case "$b" in
         main|master|develop) continue ;;
       esac
-      git branch -d "$b"
+      git branch -D "$b"
     done
 }
 
