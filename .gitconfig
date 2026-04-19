@@ -39,11 +39,15 @@
 [merge]
 	conflictstyle = zdiff3
 
+[push]
+	autoSetupRemote = true
+
+[branch]
+	sort = -committerdate
+
 [credential]
 	helper =
 
-[color]
-	ui = auto
 [credential "https://github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential

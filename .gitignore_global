@@ -23,6 +23,17 @@ DerivedData/
 # Logs
 *.log
 
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+
+# JetBrains
+.idea/
+
 # Claude
 **/.claude/settings.local.json
 
