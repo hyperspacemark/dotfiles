@@ -32,7 +32,11 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 autoload -Uz compinit
-compinit -d ~/.zcompdump
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit -d ~/.zcompdump
+else
+  compinit -C -d ~/.zcompdump
+fi
 
 bindkey '^I' menu-complete
 bindkey '^[[Z' reverse-menu-complete
