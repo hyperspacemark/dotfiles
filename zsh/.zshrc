@@ -15,6 +15,11 @@ setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+# Version Managers
+
+eval "$(pyenv init -)"            # shell function + completions (not just PATH)
+eval "$(fnm env --use-on-cd)"     # PATH + auto-switch node version on cd
+
 # Completions
 
 # Add Homebrew's Zsh completions to fpath
@@ -66,6 +71,7 @@ if command -v brew >/dev/null 2>&1; then
   BREW_PREFIX="${BREW_PREFIX:-$(brew --prefix)}"
   source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
   source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  bindkey '^ ' autosuggest-accept
 fi
 
 # Additions

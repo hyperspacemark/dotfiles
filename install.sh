@@ -19,6 +19,8 @@ link() {
   echo "Linked $dst -> $src"
 }
 
+link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+link "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
 link "$DOTFILES_DIR/zsh/.zprofile" "$HOME/.zprofile"
 link "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 

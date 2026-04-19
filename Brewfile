@@ -1,27 +1,39 @@
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
-# Command-line fuzzy finder written in Go
-brew "fzf"
-# GitHub command-line tool
-brew "gh"
-# Distributed revision control system
-brew "git"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# Cross-shell prompt for astronauts
+# Shells & Prompt
 brew "starship"
-# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
-# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# OpenAI's official ChatGPT desktop app
+
+# Version Managers
+brew "fnm"
+brew "pyenv"
+
+# Node
+brew "node"
+brew "pnpm"
+
+# Git
+brew "git"
+brew "git-delta"
+brew "gh"
+
+# CLI Tools
+brew "bat"
+brew "eza"
+brew "fzf"
+brew "ripgrep"
+brew "zoxide"
+
+# Swift / Xcode
+brew "xcbeautify"
+
+# Apps
 cask "chatgpt"
-# OpenAI's coding agent that runs in your terminal
 cask "codex"
-# Desktop client for GitHub repositories
+cask "db-browser-for-sqlite"
 cask "github"
-# Open-source code editor
 cask "visual-studio-code"
+
+# VS Code Extensions
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "llvm-vs-code-extensions.lldb-dap"
