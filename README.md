@@ -5,6 +5,7 @@
 ```bash
 ./install.sh
 brew bundle --file ./Brewfile
+./macos.sh
 ```
 
 To update local setup after repo changes:
