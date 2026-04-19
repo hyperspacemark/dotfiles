@@ -15,6 +15,11 @@ setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+# Version Managers
+
+eval "$(pyenv init -)"            # shell function + completions (not just PATH)
+eval "$(fnm env --use-on-cd)"     # PATH + auto-switch node version on cd
+
 # Completions
 
 # Add Homebrew's Zsh completions to fpath
