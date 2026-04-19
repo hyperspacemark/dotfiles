@@ -1,4 +1,4 @@
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob "!.git"'
 
 ff() {
   local file
@@ -36,7 +36,7 @@ fif() {
   local query="$1"
   [[ -n "$query" ]] || { echo "usage: fif <text>" >&2; return 2; }
 
-  rg --hidden --glob '!.git/*' --glob '!.build/*' --glob '!DerivedData/*' -n "$query" \
+  rg --hidden --no-messages --glob '!.git/*' --glob '!.build/*' --glob '!DerivedData/*' -n "$query" \
     | fzf --delimiter : --nth 3.. \
           --preview 'bat --style=numbers --color=always --highlight-line {2} -- {1}' \
           --bind 'enter:execute:code --wait --goto {1}:{2}'
