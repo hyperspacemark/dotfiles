@@ -9,7 +9,6 @@ export HISTFILE=~/.zsh_history
 setopt autocd
 setopt AUTO_MENU
 setopt COMPLETE_IN_WORD
-setopt correct
 setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY

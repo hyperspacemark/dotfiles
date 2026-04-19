@@ -19,7 +19,7 @@
 	enabled = true
 
 [help]
-	autocorrect = 10
+	autocorrect = prompt
 
 [core]
 	editor = code --wait
