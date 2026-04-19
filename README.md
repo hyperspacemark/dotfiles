@@ -1,14 +1,28 @@
 # dotfiles
 
-## Install
+## Fresh macOS install
 
 ```bash
+# 1. Install Homebrew (also triggers Xcode CLT install if needed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Add Homebrew to PATH for this session
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# 3. Clone dotfiles
+mkdir -p ~/Developer/github.com/hyperspacemark
+git clone https://github.com/hyperspacemark/dotfiles ~/Developer/github.com/hyperspacemark/dotfiles
+
+# 4. Bootstrap
+cd ~/Developer/github.com/hyperspacemark/dotfiles
 ./install.sh
 brew bundle --file ./Brewfile
 ./macos.sh
 ```
 
-To update local setup after repo changes:
+Restart the terminal, then complete the manual steps below.
+
+## Updating an existing install
 
 ```bash
 git pull
