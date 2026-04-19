@@ -71,6 +71,7 @@ if command -v brew >/dev/null 2>&1; then
   BREW_PREFIX="${BREW_PREFIX:-$(brew --prefix)}"
   source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
   source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  bindkey '^ ' autosuggest-accept
 fi
 
 # Additions
