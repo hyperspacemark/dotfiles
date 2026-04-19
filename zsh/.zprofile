@@ -1,14 +1,18 @@
-# 1. Homebrew — must be first, sets PATH/MANPATH/INFOPATH that everything else depends on
+# Homebrew
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# 2. PATH additions — order matters, later entries win
-eval "$(pyenv init --path)"    # adds ~/.pyenv/shims to PATH only
-eval "$(fnm env)"              # adds fnm shims to PATH only
+# Version Managers
 
-# 3. Locale — order-insensitive, but conventionally after PATH
+eval "$(pyenv init --path)"
+eval "$(fnm env)"
+
+# Locale
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# 4. Editor — depends on nothing, just exports
+# Editor
+
 export EDITOR="code --wait"
 export VISUAL="$EDITOR"

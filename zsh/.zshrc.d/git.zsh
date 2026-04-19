@@ -38,7 +38,7 @@ gcof() {
 
 glogf() {
   git log --oneline --decorate --color=always \
-    | fzf --ansi --no-sort --tiebreak=index --reverse --height 40% \
+    | fzf --ansi --no-sort --tiebreak=index \
           --preview 'git show --color=always {1}'
 }
 

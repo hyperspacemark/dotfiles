@@ -12,7 +12,6 @@ setopt COMPLETE_IN_WORD
 setopt correct
 setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
-setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 # Version Managers
@@ -31,7 +30,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-mkdir -p ~/.zsh/cache
 
 autoload -Uz compinit
 compinit -d ~/.zcompdump
