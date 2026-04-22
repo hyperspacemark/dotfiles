@@ -1,4 +1,5 @@
 export FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob "!.git"'
+export FZF_ALT_C_COMMAND='find . -type d -not -path "*/.git/*" 2>/dev/null'
 
 # Option+C on Mac produces ç instead of Alt+C — remap to fzf cd widget
 bindkey 'ç' fzf-cd-widget

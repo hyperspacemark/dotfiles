@@ -83,7 +83,7 @@ Built into the shell globally.
 |---|---|
 | `Ctrl+R` | Fuzzy search shell history |
 | `Ctrl+T` | Fuzzy insert file path at cursor |
-| `Alt+C` | Fuzzy `cd` into a directory |
+| `Option+C` | Fuzzy `cd` into a directory |
 | `**Tab` | Fuzzy completion (e.g. `kill **Tab`, `ssh **Tab`) |
 
 ---
