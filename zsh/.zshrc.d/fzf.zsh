@@ -10,11 +10,8 @@ ff() {
     )" || return
   else
     file="$(
-      find . -type f \
-        -not -path '*/.git/*' \
-        -not -path '*/.build/*' \
-        -not -path '*/DerivedData/*' \
-      | sed 's|^\./||' \
+      rg --files --hidden --no-messages \
+        --glob '!.git' --glob '!.build' --glob '!DerivedData' \
       | fzf --preview 'bat --style=numbers --color=always {}'
     )"
   fi

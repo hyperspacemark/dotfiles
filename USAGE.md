@@ -43,7 +43,7 @@ j my-app   # pre-filter by name
 ## File Finding & Searching
 
 ### `ff` — fuzzy file opener
-Opens a file in VS Code using fzf. Inside a git repo uses `git ls-files` (tracked + untracked). Outside, uses `find`.
+Opens a file in VS Code using fzf. Inside a git repo uses `git ls-files` (tracked + untracked). Outside, uses `rg --files` (fast, respects `.gitignore`).
 
 ```bash
 ff         # browse and open a file
