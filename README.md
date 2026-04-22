@@ -1,5 +1,7 @@
 # dotfiles
 
+See [USAGE.md](USAGE.md) for a guide to all tools and aliases.
+
 ## Fresh macOS install
 
 ```bash
