@@ -1,5 +1,8 @@
 export FZF_DEFAULT_COMMAND='rg --files --hidden --no-messages --glob "!.git"'
 
+# Option+C on Mac produces ç instead of Alt+C — remap to fzf cd widget
+bindkey 'ç' fzf-cd-widget
+
 ff() {
   local file
 
