@@ -2,6 +2,10 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Local bin
+
+export PATH="$HOME/.local/bin:$PATH"
+
 # Version Managers
 
 eval "$(pyenv init --path)"
