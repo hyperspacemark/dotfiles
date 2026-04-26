@@ -60,6 +60,19 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # -------------------------
+# Touch ID for sudo
+# -------------------------
+
+# Uses /etc/pam.d/sudo_local (Sonoma+) which persists across macOS updates
+if ! grep -q "pam_tid.so" /etc/pam.d/sudo_local 2>/dev/null; then
+  echo "Enabling Touch ID for sudo (requires sudo)..."
+  echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local > /dev/null
+  echo "Touch ID for sudo enabled."
+else
+  echo "Touch ID for sudo already configured."
+fi
+
+# -------------------------
 # Apply
 # -------------------------
 
