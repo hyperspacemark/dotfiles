@@ -43,6 +43,18 @@ gh alias set pv 'pr view --web'
 gh alias set il 'issue list'
 ```
 
+### Local shell config & secrets
+`~/.zshrc.d/local.zsh` is gitignored — create it manually for machine-specific config. On personal machines it sources `~/.secrets` automatically if the file exists:
+```bash
+# ~/.secrets — never commit this
+export CLOUDFLARE_API_TOKEN="..."
+export SOME_OTHER_SECRET="..."
+```
+Lock it down:
+```bash
+chmod 600 ~/.secrets
+```
+
 ### SSH signing key
 Generate a dedicated key for commit signing:
 ```bash
