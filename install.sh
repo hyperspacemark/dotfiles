@@ -49,9 +49,12 @@ for f in "$DOTFILES_DIR"/zsh/.zshrc.d/*.zsh; do
 done
 
 echo
-echo "Done. Restart Terminal or run: source ~/.zshrc"
+echo "Done."
+echo
+echo "Next:"
 if [[ "$PROFILE" == "work" ]]; then
-  echo "To install brew deps: brew bundle --file \"$DOTFILES_DIR/Brewfile.work\""
+  echo "  1. brew bundle --file \"$DOTFILES_DIR/Brewfile.work\""
 else
-  echo "To install brew deps: brew bundle --file \"$DOTFILES_DIR/Brewfile\""
+  echo "  1. brew bundle --file \"$DOTFILES_DIR/Brewfile\""
 fi
+echo "  2. Restart Terminal (or source ~/.zshrc)"

@@ -15,8 +15,8 @@ setopt SHARE_HISTORY
 
 # Version Managers
 
-eval "$(pyenv init -)"            # shell function + completions (not just PATH)
-eval "$(fnm env --use-on-cd)"     # PATH + auto-switch node version on cd
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+command -v fnm   >/dev/null 2>&1 && eval "$(fnm env --use-on-cd)"
 
 # Completions
 
@@ -70,9 +70,12 @@ fi
 
 if command -v brew >/dev/null 2>&1; then
   BREW_PREFIX="${BREW_PREFIX:-$(brew --prefix)}"
-  source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-  source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-  bindkey '^ ' autosuggest-accept
+  if [[ -f "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+    source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    bindkey '^ ' autosuggest-accept
+  fi
+  [[ -f "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
+    source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 # Additions
