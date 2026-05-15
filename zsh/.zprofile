@@ -8,8 +8,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Version Managers
 
-eval "$(pyenv init --path)"
-eval "$(fnm env)"
+command -v pyenv >/dev/null 2>&1 && eval "$(pyenv init --path)"
+command -v fnm   >/dev/null 2>&1 && eval "$(fnm env)"
 
 # Locale
 
