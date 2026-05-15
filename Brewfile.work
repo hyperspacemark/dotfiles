@@ -17,11 +17,5 @@ brew "zoxide"
 # Swift / Xcode
 brew "xcbeautify"
 
-# VS Code Extensions
-vscode "eamodio.gitlens"
-vscode "editorconfig.editorconfig"
-vscode "llvm-vs-code-extensions.lldb-dap"
-vscode "swiftlang.swift-vscode"
-vscode "tamasfe.even-better-toml"
-vscode "usernamehw.errorlens"
-vscode "vscodevim.vim"
+# VS Code extensions must be installed manually via the VS Code UI.
+# `code --install-extension` fails on corporate networks due to ZScaler SSL inspection.
