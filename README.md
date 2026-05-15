@@ -2,7 +2,7 @@
 
 See [USAGE.md](USAGE.md) for a guide to all tools and aliases.
 
-## Fresh macOS install
+## Fresh macOS install — personal
 
 ```bash
 # 1. Install Homebrew (also triggers Xcode CLT install if needed)
@@ -24,11 +24,39 @@ brew bundle --file ./Brewfile
 
 Restart the terminal, then complete the manual steps below.
 
+## Fresh macOS install — work
+
+```bash
+# 1. Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Add Homebrew to PATH for this session
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# 3. Clone dotfiles
+mkdir -p ~/Developer/github.com/hyperspacemark
+git clone https://github.com/hyperspacemark/dotfiles ~/Developer/github.com/hyperspacemark/dotfiles
+
+# 4. Bootstrap
+cd ~/Developer/github.com/hyperspacemark/dotfiles
+./install.sh --work
+brew bundle --file ./Brewfile.work
+./macos.sh
+```
+
+Then update `~/.gitconfig` with your work email:
+```bash
+git config --global user.email "you@work.com"
+```
+
+Restart the terminal, then complete the manual steps below.
+
 ## Updating an existing install
 
 ```bash
 git pull
-./install.sh
+./install.sh           # personal
+./install.sh --work    # work
 ```
 
 ## Manual steps

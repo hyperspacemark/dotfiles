@@ -2,6 +2,16 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROFILE="personal"
+
+for arg in "$@"; do
+  case "$arg" in
+    --work) PROFILE="work" ;;
+    --personal) PROFILE="personal" ;;
+  esac
+done
+
+echo "Installing dotfiles (profile: $PROFILE)..."
 
 link() {
   local src="$1"
@@ -19,7 +29,13 @@ link() {
   echo "Linked $dst -> $src"
 }
 
-link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+# Gitconfig — profile-specific
+if [[ "$PROFILE" == "work" ]]; then
+  link "$DOTFILES_DIR/gitconfig.work" "$HOME/.gitconfig"
+else
+  link "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+fi
+
 link "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
 link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/zsh/.zprofile" "$HOME/.zprofile"
@@ -34,4 +50,8 @@ done
 
 echo
 echo "Done. Restart Terminal or run: source ~/.zshrc"
-echo "To install brew deps: brew bundle --file \"$DOTFILES_DIR/Brewfile\""
+if [[ "$PROFILE" == "work" ]]; then
+  echo "To install brew deps: brew bundle --file \"$DOTFILES_DIR/Brewfile.work\""
+else
+  echo "To install brew deps: brew bundle --file \"$DOTFILES_DIR/Brewfile\""
+fi
