@@ -83,15 +83,16 @@ gh alias set il 'issue list'
 ```
 
 ### Local shell config & secrets
-`~/.zshrc.d/local.zsh` is gitignored — create it manually for machine-specific config. On personal machines it sources `~/.secrets` automatically if the file exists:
+`install.sh` creates two stubs automatically:
+- `~/.zshrc.d/local.zsh` — machine-specific shell config, gitignored
+- `~/.secrets` — secrets file, sourced by `local.zsh`, gitignored
+
+Just fill in `~/.secrets` with your tokens:
 ```bash
 # ~/.secrets — never commit this
-export CLOUDFLARE_API_TOKEN="..."
-export SOME_OTHER_SECRET="..."
-```
-Lock it down:
-```bash
-chmod 600 ~/.secrets
+export GITHUB_TOKEN=""
+export ANTHROPIC_API_KEY=""
+export CLOUDFLARE_API_TOKEN=""  # personal only
 ```
 
 ### SSH signing key
