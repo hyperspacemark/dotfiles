@@ -63,6 +63,17 @@ git pull
 
 These can't be automated via symlinks:
 
+### VS Code extensions (work)
+`code --install-extension` is blocked by ZScaler SSL inspection. Install these manually via the VS Code marketplace UI:
+
+- `eamodio.gitlens`
+- `editorconfig.editorconfig`
+- `llvm-vs-code-extensions.lldb-dap`
+- `swiftlang.swift-vscode`
+- `tamasfe.even-better-toml`
+- `usernamehw.errorlens`
+- `vscodevim.vim`
+
 ### gh config
 After `brew install gh` and `gh auth login`, set:
 ```bash
