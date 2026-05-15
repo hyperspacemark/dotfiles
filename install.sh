@@ -48,6 +48,40 @@ for f in "$DOTFILES_DIR"/zsh/.zshrc.d/*.zsh; do
   link "$f" "$HOME/.zshrc.d/$(basename "$f")"
 done
 
+# Create ~/.zshrc.d/local.zsh stub if it doesn't exist
+if [[ ! -f "$HOME/.zshrc.d/local.zsh" ]]; then
+  if [[ "$PROFILE" == "work" ]]; then
+    cat > "$HOME/.zshrc.d/local.zsh" << 'EOF'
+# Machine-specific config — not tracked in git.
+
+# Corporate proxy cert for Node.js tools (set path to your CA cert)
+# export NODE_EXTRA_CA_CERTS=""
+
+# Secrets
+[[ -f ~/.secrets ]] && source ~/.secrets
+EOF
+  else
+    cat > "$HOME/.zshrc.d/local.zsh" << 'EOF'
+# Machine-specific config — not tracked in git.
+
+# Secrets
+[[ -f ~/.secrets ]] && source ~/.secrets
+EOF
+  fi
+  echo "Created ~/.zshrc.d/local.zsh"
+fi
+
+# Create ~/.secrets stub if it doesn't exist
+if [[ ! -f "$HOME/.secrets" ]]; then
+  cat > "$HOME/.secrets" << 'EOF'
+# Secrets — never commit this file
+# export GITHUB_TOKEN=""
+# export ANTHROPIC_API_KEY=""
+EOF
+  chmod 600 "$HOME/.secrets"
+  echo "Created ~/.secrets stub — fill in your secrets"
+fi
+
 echo
 echo "Done."
 echo
@@ -57,4 +91,5 @@ if [[ "$PROFILE" == "work" ]]; then
 else
   echo "  1. brew bundle --file \"$DOTFILES_DIR/Brewfile\""
 fi
-echo "  2. Restart Terminal (or source ~/.zshrc)"
+echo "  2. Fill in ~/.secrets"
+echo "  3. Restart Terminal (or source ~/.zshrc)"
