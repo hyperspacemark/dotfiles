@@ -7,9 +7,6 @@ brew "zsh-syntax-highlighting"
 brew "fnm"
 brew "pyenv"
 
-# Node
-brew "node"
-brew "pnpm"
 
 # Git
 brew "git"

@@ -100,5 +100,7 @@ if [[ "$PROFILE" == "work" ]]; then
 else
   echo "  1. brew bundle --file \"$DOTFILES_DIR/Brewfile\""
 fi
-echo "  2. Fill in ~/.secrets"
-echo "  3. Restart Terminal (or source ~/.zshrc)"
+echo "  2. fnm install --lts && fnm default lts-latest"
+echo "  3. npm i -g pnpm vercel"
+echo "  4. Fill in ~/.secrets"
+echo "  5. Restart Terminal (or source ~/.zshrc)"

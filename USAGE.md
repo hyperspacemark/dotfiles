@@ -165,11 +165,14 @@ Built into the shell globally.
 ## Node
 
 ### fnm — Node version manager
+Manages Node versions. Homebrew does not install Node — fnm owns it entirely.
 Auto-switches version on `cd` if a `.node-version` file is present.
 
 | Command | Action |
 |---|---|
-| `fnm install 22` | Install Node 22 |
+| `fnm install --lts` | Install latest LTS |
+| `fnm install 22` | Install a specific version |
+| `fnm default lts-latest` | Set global default |
 | `fnm use 22` | Switch to it in current shell |
 | `fnm list` | List installed versions |
 | `fnm current` | Show active version |
@@ -177,6 +180,12 @@ Auto-switches version on `cd` if a `.node-version` file is present.
 Pin a project's Node version:
 ```bash
 echo "22" > .node-version
+```
+
+### Global npm tools
+`pnpm` and `vercel` are installed as npm globals, not via Homebrew:
+```bash
+npm i -g pnpm vercel
 ```
 
 ### pnpm
