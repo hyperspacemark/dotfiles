@@ -13,6 +13,9 @@ brew "git"
 brew "git-delta"
 brew "gh"
 
+# Deployment
+brew "railway"
+
 # CLI Tools
 brew "bat"
 brew "eza"
