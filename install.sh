@@ -48,6 +48,15 @@ for f in "$DOTFILES_DIR"/zsh/.zshrc.d/*.zsh; do
   link "$f" "$HOME/.zshrc.d/$(basename "$f")"
 done
 
+# Claude Code: personal skills and subagents. Skills are directories, agents are
+# single files; both are discovered from ~/.claude by name.
+for d in "$DOTFILES_DIR"/claude/skills/*/; do
+  link "${d%/}" "$HOME/.claude/skills/$(basename "$d")"
+done
+for f in "$DOTFILES_DIR"/claude/agents/*.md; do
+  link "$f" "$HOME/.claude/agents/$(basename "$f")"
+done
+
 # Create ~/.zshrc.d/local.zsh stub if it doesn't exist
 if [[ ! -f "$HOME/.zshrc.d/local.zsh" ]]; then
   if [[ "$PROFILE" == "work" ]]; then
