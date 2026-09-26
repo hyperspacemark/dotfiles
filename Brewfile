@@ -31,6 +31,7 @@ cask "chatgpt"
 cask "codex"
 cask "db-browser-for-sqlite"
 cask "github"
+cask "gcloud-cli"
 cask "visual-studio-code"
 
 # VS Code Extensions
