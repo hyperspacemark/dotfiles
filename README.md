@@ -20,6 +20,10 @@ cd ~/Developer/github.com/hyperspacemark/dotfiles
 ./install.sh
 brew bundle --file ./Brewfile
 ./macos.sh
+
+# 5. Set up Node (fnm manages Node — not Homebrew)
+fnm install --lts && fnm default lts-latest
+npm i -g pnpm vercel
 ```
 
 Restart the terminal, then complete the manual steps below.
@@ -42,6 +46,10 @@ cd ~/Developer/github.com/hyperspacemark/dotfiles
 ./install.sh --work
 brew bundle --file ./Brewfile.work
 ./macos.sh
+
+# 5. Set up Node (fnm manages Node — not Homebrew)
+fnm install --lts && fnm default lts-latest
+npm i -g pnpm vercel
 ```
 
 Then update `~/.gitconfig` with your work email:

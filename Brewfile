@@ -7,14 +7,16 @@ brew "zsh-syntax-highlighting"
 brew "fnm"
 brew "pyenv"
 
-# Node
-brew "node"
-brew "pnpm"
 
 # Git
 brew "git"
 brew "git-delta"
 brew "gh"
+
+# Deployment
+brew "railway"
+brew "supabase/tap/supabase"
+brew "vercel"
 
 # CLI Tools
 brew "bat"
