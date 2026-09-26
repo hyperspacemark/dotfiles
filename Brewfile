@@ -15,6 +15,8 @@ brew "gh"
 
 # Deployment
 brew "railway"
+brew "supabase/tap/supabase"
+brew "vercel"
 
 # CLI Tools
 brew "bat"
