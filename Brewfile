@@ -19,6 +19,7 @@ brew "supabase/tap/supabase"
 brew "vercel"
 
 # CLI Tools
+cask "1password-cli"
 brew "bat"
 brew "eza"
 brew "fzf"
@@ -29,6 +30,7 @@ brew "zoxide"
 brew "xcbeautify"
 
 # Apps
+cask "1password"
 cask "chatgpt"
 cask "codex"
 cask "db-browser-for-sqlite"
